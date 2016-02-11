@@ -1,0 +1,9 @@
+{
+  "name": "form",
+  "version": "",
+  "repository": "",
+  "license": "",
+  "dependencies": {
+    "angular": "1.*"
+  }
+}

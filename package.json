@@ -1,0 +1,23 @@
+{
+  "name": "form",
+  "version": "",
+  "repository": "",
+  "license": "",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-eslint": "*",
+    "gulp-concat-sourcemap": "*",
+    "gulp-angular-templatecache": "*",
+    "del": "*",
+    "bower": "*",
+    "freddie": "*"
+  },
+  "scripts": {
+    "setup": "npm install && bower install",
+    "lint":"gulp lint",
+    "test":"gulp test",
+    "build" : "gulp build",
+    "server": "freddie",
+    "live": "npm run build && npm run server"
+  }
+}

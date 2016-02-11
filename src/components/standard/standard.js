@@ -1,24 +1,26 @@
-angular.module('app.standard', [])
+angular.module('app.standard', [
+  'app.logFields' // appLogFields
+])
 
-.directive('appStandard', function ($http, $log) {
+.directive('appStandard', function ($injector) {
   'use strict';
 
+  var $http = $injector.get('$http');
+  var appLogFields = $injector.get('appLogFields');
+
   var controller = function ($scope) {
-    var submit = function () {
-      $log.log($scope.fields);
+    $scope.submit = function () {
+      appLogFields($scope.fields);
     };
+
+    $scope.fields = [];
 
     $http.get('api/fields')
     .then(function (request) { $scope.fields = request.data; });
-
-    angular.extend($scope, {
-      submit: submit
-    });
-
-    $scope.fields = [];
   };
 
   return {
+    scope: true,
     controller: controller,
     templateUrl: 'standard/standard.html'
   };

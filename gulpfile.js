@@ -18,10 +18,22 @@ gulp.task('lint', ['clean'], function () {
 
 gulp.task('test', ['lint']);
 
-gulp.task('index', ['test'], function () {
-  return gulp.src('src/index.html')
-    .pipe(gulp.dest('dist'));
+gulp.task('dependencies.styles', ['test'], function () {
+  return gulp.src(dependencies.styles)
+    .pipe(concat('dependencies.css', { sourcesContent: true }))
+    .pipe(gulp.dest('./dist/'));
 });
+
+gulp.task('dependencies.scripts', ['test'], function () {
+  return gulp.src(dependencies.scripts)
+    .pipe(concat('dependencies.js', { sourcesContent: true }))
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('dependencies', [
+  'dependencies.styles',
+  'dependencies.scripts'
+]);
 
 gulp.task('resources', ['test'], function () {
   return gulp.src('resources/**')
@@ -29,13 +41,13 @@ gulp.task('resources', ['test'], function () {
 });
 
 gulp.task('styles', ['test'], function () {
-  return gulp.src('./src/styles.css')
-    .pipe(gulp.dest('./dist/'));
-});
+  var styles = [
+    './src/components/**/*.css',
+    './src/theme/**/*.css'
+  ];
 
-gulp.task('dependencies', ['test'], function () {
-  return gulp.src(dependencies)
-    .pipe(concat('dependencies.js', { sourcesContent: true }))
+  return gulp.src(styles)
+    .pipe(concat('styles.css', { sourcesContent: true }))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -54,11 +66,16 @@ gulp.task('templates', ['test'], function () {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('index', ['test'], function () {
+  return gulp.src('src/index.html')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('build', [
-  'index',
+  'dependencies',
   'resources',
   'styles',
-  'dependencies',
   'scripts',
-  'templates'
+  'templates',
+  'index'
 ]);

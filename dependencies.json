@@ -1,4 +1,11 @@
-[
-  "bower_components/angular/angular.js",
-  "bower_components/ngl.form/src/form.js"
-]
+{
+  "scripts": [
+    "bower_components/angular/angular.js",
+
+    "bower_components/lodash/lodash.js",
+    "bower_components/ngl.lodash/src/lodash.js",
+
+    "bower_components/ngl.form/src/form.js"
+  ],
+  "styles": []
+}

@@ -4,6 +4,7 @@
   "repository": "",
   "license": "",
   "dependencies": {
-    "angular": "1.*"
+    "angular": "1.*",
+    "ngl.form": "*"
   }
 }

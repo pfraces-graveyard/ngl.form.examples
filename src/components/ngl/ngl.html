@@ -1,0 +1,12 @@
+<h2><code>&lt;ngl-form-submit&gt;</code> & <code>&lt;ngl-form-password&gt;</code></h2>
+
+<div ngl-form-submit="submit()">
+  <div ng-repeat="field in fields">
+    <div ng-if="!field.disabled">
+      <input ng-if="field.password" ngl-form-password ng-model="field.value" placeholder="{{ field.label }}">
+      <input ng-if="!field.password" ng-model="field.value" placeholder="{{ field.label }}">
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</div>

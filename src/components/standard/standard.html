@@ -1,0 +1,12 @@
+<h2>Standard form</h2>
+
+<form ng-submit="submit()" novalidate autocomplete="off">
+  <div ng-repeat="field in fields">
+    <div ng-if="!field.disabled">
+      <input ng-if="field.password" type="password" ng-model="field.value" placeholder="{{ field.label }}">
+      <input ng-if="!field.password" ng-model="field.value" placeholder="{{ field.label }}">
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

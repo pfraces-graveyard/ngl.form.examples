@@ -1,3 +1,4 @@
 [
-  "bower_components/angular/angular.min.js"
+  "bower_components/angular/angular.js",
+  "bower_components/ngl.form/src/form.js"
 ]

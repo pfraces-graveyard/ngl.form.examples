@@ -15,16 +15,16 @@ angular.module('app.log', [
   var appLogCache = $injector.get('appLogCache');
 
   var log = function (msg) {
-    if (!lodash.isString(msg)) { msg = JSON.stringify(msg, null, 2); }
+    if (!lodash.isString(msg)) { msg = angular.toJson(msg, 2); }
     appLogCache.push(msg);
   };
-  
+
   return log;
 })
 
 .directive('appLog', function ($injector) {
   'use strict';
-  
+
   var appLogCache = $injector.get('appLogCache');
 
   var controller = function ($scope) {

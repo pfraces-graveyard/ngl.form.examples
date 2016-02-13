@@ -1,6 +1,4 @@
-angular.module('app.log', [
-  'ngl.lodash' // lodash
-])
+angular.module('app.log', [])
 
 .factory('appLogCache', function () {
   'use strict';
@@ -11,11 +9,10 @@ angular.module('app.log', [
 .factory('appLog', function ($injector) {
   'use strict';
 
-  var lodash = $injector.get('lodash');
   var appLogCache = $injector.get('appLogCache');
 
   var log = function (msg) {
-    if (!lodash.isString(msg)) { msg = angular.toJson(msg, 2); }
+    if (typeof msg !== 'string') { msg = angular.toJson(msg, 2); }
     appLogCache.push(msg);
   };
 

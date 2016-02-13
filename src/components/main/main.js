@@ -7,7 +7,9 @@ angular.module('app.main', [
 .directive('appMain', function () {
   'use strict';
 
-  var controller = function () {};
+  var controller = function ($scope) {
+    $scope.title = 'ngl.form examples';
+  };
 
   return {
     scope: true,

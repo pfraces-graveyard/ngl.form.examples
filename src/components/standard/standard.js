@@ -1,5 +1,5 @@
 angular.module('app.standard', [
-  'app.logFields' // appLogFields
+  'app.log' // appLogFields
 ])
 
 .directive('appStandard', function ($injector) {

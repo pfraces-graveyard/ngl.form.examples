@@ -29,17 +29,19 @@
   bottom: 0px;
   right: 0px;
   width: 30%;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .app-main-column {
   margin: 0px auto;
   width: 900px;
-  padding: 0px 10px;
 }
 
 .app-main-body .app-main-column {
   height: 100%;
   padding-top: 60px;
   padding-bottom: 30px;
+}
+
+.app-main-view {
+  padding: 0px 10px;
 }

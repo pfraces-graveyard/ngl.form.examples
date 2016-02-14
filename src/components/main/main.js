@@ -1,7 +1,7 @@
 angular.module('app.main', [
+  'ngl.log',      // <ngl-log>
   'app.standard', // <app-standard>
-  'app.ngl',      // <app-ngl>
-  'app.log'       // <app-log>
+  'app.ngl'       // <app-ngl>
 ])
 
 .directive('appMain', function () {

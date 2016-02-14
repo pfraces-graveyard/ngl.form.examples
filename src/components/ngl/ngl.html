@@ -1,12 +1,16 @@
-<h2><code ng-bind="'<ngl-form-submit> + <ngl-form-password>'"></code></h2>
+<div class="app-ngl">
+  <h1><code ng-bind="'<ngl-form-submit> + <ngl-form-password>'"></code></h1>
 
-<div ngl-form-submit="submit()">
-  <div ng-repeat="field in fields">
-    <div ng-if="!field.disabled">
+  <div ngl-form-submit="submit()">
+    <div ng-repeat="field in fields" ng-if="!field.disabled" class="app-ngl-control">
+      <label ng-bind="field.label"></label>
       <input ng-if="field.password" ngl-form-password ng-model="field.value" placeholder="{{ field.label }}">
       <input ng-if="!field.password" ng-model="field.value" placeholder="{{ field.label }}">
     </div>
-  </div>
 
-  <button type="submit">Submit</button>
+    <div class="app-ngl-control">
+      <label></label>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,8 @@
+.app-standard label {
+  display: inline-block;
+  width: 100px;
+}
+
+.app-standard-control {
+  margin: 10px;
+}

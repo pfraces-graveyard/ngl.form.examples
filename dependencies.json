@@ -3,7 +3,11 @@
     "bower_components/angular/angular.js",
     "bower_components/lodash/lodash.js",
     "bower_components/ngl.lodash/src/lodash.js",
-    "bower_components/ngl.form/src/form.js"
+    "bower_components/ngl.form/src/form.js",
+    "bower_components/ngl.log/dist/log.js",
+    "bower_components/ngl.log/dist/templates.js"
   ],
-  "styles": []
+  "styles": [
+    "bower_components/ngl.log/dist/log.css"
+  ]
 }

@@ -1,12 +1,16 @@
-<h2>Standard form</h2>
+<div class="app-ngl">
+  <h1>Standard form</h1>
 
-<form ng-submit="submit()" novalidate autocomplete="off">
-  <div ng-repeat="field in fields">
-    <div ng-if="!field.disabled">
+  <form ng-submit="submit()" novalidate autocomplete="off">
+    <div ng-repeat="field in fields" ng-if="!field.disabled" class="app-standard-control">
+      <label ng-bind="field.label"></label>
       <input ng-if="field.password" type="password" ng-model="field.value" placeholder="{{ field.label }}">
       <input ng-if="!field.password" ng-model="field.value" placeholder="{{ field.label }}">
     </div>
-  </div>
 
-  <button type="submit">Submit</button>
-</form>
+    <div class="app-standard-control">
+      <label></label>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

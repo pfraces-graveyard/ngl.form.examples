@@ -1,6 +1,6 @@
 angular.module('app.ngl', [
-  'ngl.form',     // <ngl-form-submit>, <ngl-form-password>
-  'app.logFields' // appLogFields
+  'ngl.form', // <ngl-form-submit>, <ngl-form-password>
+  'app.log'   // appLogFields
 ])
 
 .directive('appNgl', function ($injector) {

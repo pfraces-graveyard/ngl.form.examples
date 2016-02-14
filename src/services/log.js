@@ -1,13 +1,13 @@
-angular.module('app.logFields', [
+angular.module('app.log', [
   'ngl.lodash', // lodash
-  'app.log'     // appLog
+  'ngl.log'     // nglLog
 ])
 
 .factory('appLogFields', function ($injector) {
   'use strict';
 
   var lodash = $injector.get('lodash');
-  var appLog = $injector.get('appLog');
+  var nglLog = $injector.get('nglLog');
 
   var fieldsFmt = function (fields) {
     return lodash
@@ -18,7 +18,7 @@ angular.module('app.logFields', [
   };
 
   var logFields = function (fields) {
-    appLog(fieldsFmt(fields));
+    nglLog(fieldsFmt(fields));
   };
 
   return logFields;

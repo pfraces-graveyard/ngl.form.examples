@@ -1,6 +1,6 @@
 angular.module('app.log', [
   'ngl.lodash', // lodash
-  'ngl.log'     // nglLog
+  'ngl.log'     // nglLog, <ngl-log>
 ])
 
 .factory('appLogFields', function ($injector) {
@@ -22,4 +22,22 @@ angular.module('app.log', [
   };
 
   return logFields;
+})
+
+.directive('appLog', function ($injector) {
+  'use strict';
+
+  var nglLogCache = $injector.get('nglLogCache');
+
+  var controller = function ($scope) {
+    $scope.clearLog = function () {
+      nglLogCache.length = 0;
+    };
+  };
+
+  return {
+    scope: true,
+    controller: controller,
+    templateUrl: 'log/log.html'
+  };
 });

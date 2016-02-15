@@ -1,5 +1,5 @@
 angular.module('app.main', [
-  'ngl.log',      // <ngl-log>
+  'app.log',      // <app-log>
   'app.standard', // <app-standard>
   'app.ngl'       // <app-ngl>
 ])

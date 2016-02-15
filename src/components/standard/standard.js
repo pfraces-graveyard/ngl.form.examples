@@ -1,11 +1,12 @@
 angular.module('app.standard', [
-  'app.log' // appLogFields
+  'app.request', // appRequest
+  'app.log'      // appLogFields
 ])
 
 .directive('appStandard', function ($injector) {
   'use strict';
 
-  var $http = $injector.get('$http');
+  var appRequest = $injector.get('appRequest');
   var appLogFields = $injector.get('appLogFields');
 
   var controller = function ($scope) {
@@ -15,7 +16,7 @@ angular.module('app.standard', [
 
     $scope.fields = [];
 
-    $http.get('api/fields')
+    appRequest.fields()
     .then(function (request) { $scope.fields = request.data; });
   };
 

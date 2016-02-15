@@ -1,12 +1,13 @@
 angular.module('app.ngl', [
-  'ngl.form', // <ngl-form-submit>, <ngl-form-password>
-  'app.log'   // appLogFields
+  'app.request', // appRequest
+  'app.log',     // appLogFields
+  'ngl.form'     // <ngl-form-submit>, <ngl-form-password>
 ])
 
 .directive('appNgl', function ($injector) {
   'use strict';
 
-  var $http = $injector.get('$http');
+  var appRequest = $injector.get('appRequest');
   var appLogFields = $injector.get('appLogFields');
 
   var controller = function ($scope) {
@@ -16,7 +17,7 @@ angular.module('app.ngl', [
 
     $scope.fields = [];
 
-    $http.get('api/fields')
+    appRequest.fields()
     .then(function (request) { $scope.fields = request.data; });
   };
 

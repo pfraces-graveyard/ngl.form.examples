@@ -1,7 +1,7 @@
 <div class="view-login-standard">
   <h1 ng-bind="title"></h1>
 
-  <form ng-submit="submit()">
+  <form ng-submit="submit(fields)">
     <div ng-repeat="field in fields" ng-if="!field.disabled" class="view-login-control">
       <label ng-bind="field.label"></label>
       <input ng-if="field.password" type="password" ng-model="field.value" placeholder="{{ field.label }}">

@@ -1,16 +1,17 @@
 {
   "scripts": [
     "bower_components/angular/angular.js",
+    "bower_components/angular-route/angular-route.js",
 
     "bower_components/lodash/lodash.js",
     "bower_components/ngl.lodash/src/lodash.js",
 
+    "bower_components/ngl.log/dist/log.js",
+    "bower_components/ngl.log/dist/templates.js",
+
     "bower_components/gator/gator.js",
     "bower_components/ngl.gator/src/gator.js",
-    "bower_components/ngl.form/src/form.js",
-
-    "bower_components/ngl.log/dist/log.js",
-    "bower_components/ngl.log/dist/templates.js"
+    "bower_components/ngl.form/src/form.js"
   ],
   "styles": [
     "bower_components/ngl.log/dist/log.css"

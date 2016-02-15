@@ -8,13 +8,10 @@ angular.module('view.login.ngl', [
   'use strict';
 
   var appRequest = $injector.get('appRequest');
-  var appLogFields = $injector.get('appLogFields');
+  var viewLogin = $injector.get('viewLogin');
 
   var controller = function ($scope) {
-    $scope.submit = function () {
-      appLogFields($scope.fields);
-    };
-
+    $scope.submit = viewLogin;
     $scope.title = '<ngl-form-submit> + <ngl-form-password>';
     $scope.fields = [];
 

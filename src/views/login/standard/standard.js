@@ -7,13 +7,10 @@ angular.module('view.login.standard', [
   'use strict';
 
   var appRequest = $injector.get('appRequest');
-  var appLogFields = $injector.get('appLogFields');
+  var viewLogin = $injector.get('viewLogin');
 
   var controller = function ($scope) {
-    $scope.submit = function () {
-      appLogFields($scope.fields);
-    };
-
+    $scope.submit = viewLogin;
     $scope.title = 'Standard form';
     $scope.fields = [];
 

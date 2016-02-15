@@ -3,4 +3,8 @@ angular.module('app', [
   'app.main'   // <app-main>
 ])
 
-.config(function ($locationProvider) { $locationProvider.html5Mode(true); });
+.config(function ($locationProvider) {
+  'use strict';
+
+  $locationProvider.html5Mode(true);
+});

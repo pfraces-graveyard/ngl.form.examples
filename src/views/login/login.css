@@ -1,8 +1,9 @@
-.app-standard label {
+.view-login label {
   display: inline-block;
   width: 100px;
 }
 
-.app-standard-control {
+.view-login-control {
   margin: 10px;
 }
+

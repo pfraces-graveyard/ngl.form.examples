@@ -6,7 +6,7 @@
   height: 60px;
 }
 
-.app-main-body {
+.app-main-view {
   position: fixed;
   z-index: 1;
   top: 0px;
@@ -36,12 +36,8 @@
   width: 900px;
 }
 
-.app-main-body .app-main-column {
+.app-main-view .app-main-column {
   height: 100%;
   padding-top: 60px;
   padding-bottom: 30px;
-}
-
-.app-main-view {
-  padding: 0px 10px;
 }

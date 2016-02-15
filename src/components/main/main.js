@@ -1,19 +1,18 @@
 angular.module('app.main', [
-  'app.log',      // <app-log>
-  'app.standard', // <app-standard>
-  'app.ngl'       // <app-ngl>
-])
+  'app.header', // <app-header>
+  'app.view',   // <app-view>
+  'app.footer', // <app-footer>
+  'app.log'     // <app-log>
+ ])
 
 .directive('appMain', function () {
   'use strict';
 
-  var controller = function ($scope) {
-    $scope.title = 'ngl.form examples';
-  };
+  var controller = function () {};
 
   return {
-    scope: true,
     controller: controller,
     templateUrl: 'main/main.html'
   };
 });
+

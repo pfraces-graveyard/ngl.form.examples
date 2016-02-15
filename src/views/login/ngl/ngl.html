@@ -1,14 +1,14 @@
-<div class="app-ngl">
-  <h1><code ng-bind="'<ngl-form-submit> + <ngl-form-password>'"></code></h1>
+<div class="view-login-ngl">
+  <h1><code ng-bind="title"></code></h1>
 
   <div ngl-form-submit="submit()">
-    <div ng-repeat="field in fields" ng-if="!field.disabled" class="app-ngl-control">
+    <div ng-repeat="field in fields" ng-if="!field.disabled" class="view-login-control">
       <label ng-bind="field.label"></label>
       <input ng-if="field.password" ngl-form-password ng-model="field.value" placeholder="{{ field.label }}">
       <input ng-if="!field.password" ng-model="field.value" placeholder="{{ field.label }}">
     </div>
 
-    <div class="app-ngl-control">
+    <div class="view-login-control">
       <label></label>
       <button type="submit">Submit</button>
     </div>

@@ -1,9 +1,10 @@
-angular.module('app.standard', [
+angular.module('view.login.ngl', [
   'app.request', // appRequest
-  'app.log'      // appLogFields
+  'app.log',     // appLogFields
+  'ngl.form'     // <ngl-form-submit>, <ngl-form-password>
 ])
 
-.directive('appStandard', function ($injector) {
+.directive('viewLoginNgl', function ($injector) {
   'use strict';
 
   var appRequest = $injector.get('appRequest');
@@ -14,6 +15,7 @@ angular.module('app.standard', [
       appLogFields($scope.fields);
     };
 
+    $scope.title = '<ngl-form-submit> + <ngl-form-password>';
     $scope.fields = [];
 
     appRequest.fields()
@@ -23,6 +25,6 @@ angular.module('app.standard', [
   return {
     scope: true,
     controller: controller,
-    templateUrl: 'standard/standard.html'
+    templateUrl: 'login/ngl/ngl.html'
   };
 });

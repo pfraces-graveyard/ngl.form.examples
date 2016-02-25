@@ -1,16 +1,16 @@
 angular.module('view.login.standard', [
   'app.request', // appRequest
-  'app.log'      // appLogFields
+  'app.login'    // appLogin
 ])
 
 .directive('viewLoginStandard', function ($injector) {
   'use strict';
 
   var appRequest = $injector.get('appRequest');
-  var viewLogin = $injector.get('viewLogin');
+  var appLogin = $injector.get('appLogin');
 
   var controller = function ($scope) {
-    $scope.submit = viewLogin;
+    $scope.submit = appLogin;
     $scope.title = 'Standard form';
     $scope.fields = [];
 

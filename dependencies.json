@@ -9,8 +9,6 @@
     "bower_components/ngl.log/dist/log.js",
     "bower_components/ngl.log/dist/templates.js",
 
-    "bower_components/gator/gator.js",
-    "bower_components/ngl.gator/src/gator.js",
     "bower_components/ngl.form/src/form.js"
   ],
   "styles": [

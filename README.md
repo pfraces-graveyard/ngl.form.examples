@@ -1,7 +1,7 @@
 ngl.form examples
 =================
 
-`<ngl-form-submit>` and `<ngl-form-submit>` usage examoples
+`<ngl-form>` and `<ngl-form-input>` usage examples
 
 Setup
 -----

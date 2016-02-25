@@ -1,18 +1,18 @@
 angular.module('view.login.ngl', [
   'app.request', // appRequest
-  'app.log',     // appLogFields
-  'ngl.form'     // <ngl-form-submit>, <ngl-form-password>
+  'app.login',   // appLogin
+  'ngl.form'     // <ngl-form>, <ngl-form-input>
 ])
 
 .directive('viewLoginNgl', function ($injector) {
   'use strict';
 
   var appRequest = $injector.get('appRequest');
-  var viewLogin = $injector.get('viewLogin');
+  var appLogin = $injector.get('appLogin');
 
   var controller = function ($scope) {
-    $scope.submit = viewLogin;
-    $scope.title = '<ngl-form-submit> + <ngl-form-password>';
+    $scope.submit = appLogin;
+    $scope.title = '<ngl-form> + <ngl-form-input>';
     $scope.fields = [];
 
     appRequest.fields()

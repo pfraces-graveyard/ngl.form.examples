@@ -15,7 +15,7 @@ angular.module('view.login.standard', [
     $scope.fields = [];
 
     appRequest.fields()
-    .then(function (request) { $scope.fields = request.data; });
+    .then(function (response) { $scope.fields = response.data; });
   };
 
   return {
